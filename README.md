@@ -2,7 +2,7 @@
 
 ```
       / _ \ 
-   \_\\(_)/_/  NetCrawl - TnYtCoder
+    \_\(_)/_/  NetCrawl - TnYtCoder
      _//"\\_     Website Crawler & Directory Discovery
       /   \
 ```
