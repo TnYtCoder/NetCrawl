@@ -17,6 +17,9 @@
 
 NetCrawl is a powerful, multi-threaded website crawler designed for comprehensive website mapping and directory discovery. It efficiently enumerates web resources while maintaining ethical crawling standards.
 
+![main-banner](https://github.com/user-attachments/assets/1b1b186c-a072-435b-924b-c0b2ba6cb5bc)
+
+
 **Key Features:**
 - 🚀 Multi-threaded architecture for fast crawling
 - 🎨 Beautiful colored terminal output
