@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetCrawl - Website Crawler & Directory Discovery Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">NetCrawl</span>
+                <span class="logo-version">v2.0</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#docs">API</a></li>
+                <li><a href="https://github.com/TnYtCoder/NetCrawl" class="github-link">GitHub</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <pre class="ascii-banner">
+     / _ \ 
+   \_\\(_)/_/  NetCrawl
+    _//"\\_     TnYtCoder
+     /   \
+            </pre>
+            <h1>Website Crawler & Directory Discovery Tool</h1>
+            <p class="hero-subtitle">Fast • Stealthy • Professional</p>
+            <div class="hero-buttons">
+                <a href="#installation" class="btn btn-primary">Get Started</a>
+                <a href="https://github.com/TnYtCoder/NetCrawl" class="btn btn-secondary">View on GitHub</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Common Paths</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">30x</span>
+                    <span class="stat-label">Faster</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Output Formats</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why NetCrawl?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Multi-threaded architecture crawls hundreds of URLs per minute. Configurable thread count for optimal performance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Beautiful Output</h3>
+                    <p>Color-coded logs with real-time progress bars. Easy to read, easy to debug.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Smart & Stealthy</h3>
+                    <p>Rate limiting, user-agent rotation, and robots.txt compliance. Won't get you blocked.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📁</div>
+                    <h3>Directory Discovery</h3>
+                    <p>Finds hidden directories, admin panels, backup files, and API endpoints automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Rich Reports</h3>
+                    <p>TXT format for humans, JSON format for automation. Complete statistics and categorization.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Sitemap Support</h3>
+                    <p>Parses robots.txt and sitemap.xml to discover even more URLs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2 class="section-title">See It In Action</h2>
+            <div class="screenshot-grid">
+                <figure class="screenshot-card">
+                    <img src="screenshots/banner.png" alt="NetCrawl banner and help menu">
+                    <figcaption>Clean interface with ASCII art</figcaption>
+                </figure>
+                <figure class="screenshot-card">
+                    <img src="screenshots/crawl-demo.png" alt="Crawling in progress">
+                    <figcaption>Real-time crawling with progress bar</figcaption>
+                </figure>
+                <figure class="screenshot-card">
+                    <img src="screenshots/report.png" alt="Final report">
+                    <figcaption>Comprehensive summary report</figcaption>
+                </figure>
+                <figure class="screenshot-card">
+                    <img src="screenshots/json-output.png" alt="JSON export">
+                    <figcaption>Machine-readable JSON output</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="installation">
+        <div class="container">
+            <h2 class="section-title">Installation</h2>
+            <div class="code-block">
+                <div class="code-header">
+                    <span>Quick Install</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+                <pre><code># Clone the repository
+git clone https://github.com/TnYtCoder/NetCrawl.git
+cd NetCrawl
+
+# Install dependencies
+pip install requests beautifulsoup4 colorama
+
+# Verify installation
+python netcrawl.py --help</code></pre>
+            </div>
+
+            <div class="requirements">
+                <h3>Requirements</h3>
+                <ul>
+                    <li>Python 3.7 or higher</li>
+                    <li>pip package manager</li>
+                    <li>Internet connection</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section id="usage" class="usage">
+        <div class="container">
+            <h2 class="section-title">Usage Guide</h2>
+            
+            <div class="usage-grid">
+                <div class="usage-card">
+                    <h3>Basic Syntax</h3>
+                    <div class="code-block small">
+                        <pre><code>python netcrawl.py &lt;target_url&gt; [options]</code></pre>
+                    </div>
+                </div>
+
+                <div class="usage-card">
+                    <h3>Quick Examples</h3>
+                    <div class="code-block small">
+                        <pre><code># Basic crawl
+python netcrawl.py https://example.com
+
+# Deep crawl
+python netcrawl.py https://example.com --depth 5 --threads 20
+
+# Fast scan
+python netcrawl.py https://example.com --threads 30 --delay 0.1
+
+# Limited crawl
+python netcrawl.py https://example.com --max-urls 500</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Command Reference</h3>
+            <div class="table-container">
+                <table class="options-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Description</th>
+                            <th>Default</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>--depth N</code></td>
+                            <td>Maximum crawl depth</td>
+                            <td>3</td>
+                            <td><code>--depth 5</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>--threads N</code></td>
+                            <td>Concurrent threads</td>
+                            <td>10</td>
+                            <td><code>--threads 20</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>--max-urls N</code></td>
+                            <td>URL limit</td>
+                            <td>10000</td>
+                            <td><code>--max-urls 5000</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>--timeout N</code></td>
+                            <td>Request timeout (seconds)</td>
+                            <td>15</td>
+                            <td><code>--timeout 10</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>--delay N</code></td>
+                            <td>Delay between requests</td>
+                            <td>0.5</td>
+                            <td><code>--delay 0.1</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>--no-color</code></td>
+                            <td>Disable colored output</td>
+                            <td>False</td>
+                            <td><code>--no-color</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="examples">
+        <div class="container">
+            <h2 class="section-title">Real-World Examples</h2>
+            
+            <div class="example-card">
+                <h3>WordPress Site Discovery</h3>
+                <div class="code-block">
+                    <pre><code>$ python netcrawl.py https://wordpress-site.com
+
+[→] 10:30:15 - Crawling: https://wordpress-site.com (Depth: 0)
+[+] 10:30:16 - Found: https://wordpress-site.com/wp-admin (Status: 302)
+[+] 10:30:16 - Found: https://wordpress-site.com/wp-content/ (Status: 403)
+[+] 10:30:17 - Found: https://wordpress-site.com/wp-json/ (Status: 200)
+[+] 10:30:18 - Found: https://wordpress-site.com/xmlrpc.php (Status: 405)
+[+] 10:30:19 - Found in robots.txt: /wp-admin/
+[+] 10:30:20 - Found in sitemap: https://wordpress-site.com/about
+
+Progress: 47/234 URLs ████░░░░░░░░░░</code></pre>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h3>API Endpoint Discovery</h3>
+                <div class="code-block">
+                    <pre><code>$ python netcrawl.py https://api.example.com --depth 2 --delay 0.3
+
+[→] 10:31:20 - Crawling: https://api.example.com (Depth: 0)
+[+] 10:31:21 - Found: https://api.example.com/v1/users (Status: 401)
+[+] 10:31:21 - Found: https://api.example.com/v1/products (Status: 200)
+[+] 10:31:22 - Found: https://api.example.com/v2/auth (Status: 404)
+[+] 10:31:22 - Found: https://api.example.com/docs (Status: 200)
+[+] 10:31:23 - Found: https://api.example.com/graphql (Status: 400)
+[+] 10:31:24 - Found: https://api.example.com/swagger (Status: 200)
+
+Progress: 23/89 URLs ██░░░░░░░░░░░░</code></pre>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h3>Security Audit Findings</h3>
+                <div class="code-block">
+                    <pre><code>$ python netcrawl.py https://testsite.com --depth 4 --threads 15
+
+[→] 10:32:10 - Crawling: https://testsite.com (Depth: 0)
+[✓] 10:32:11 - Found: https://testsite.com/.env (Status: 403)
+[✓] 10:32:11 - Found: https://testsite.com/backup.zip (Status: 200)
+[✓] 10:32:12 - Found: https://testsite.com/admin (Status: 200)
+[✓] 10:32:12 - Found: https://testsite.com/phpinfo.php (Status: 200)
+[✓] 10:32:13 - Found: https://testsite.com/.git/config (Status: 404)
+
+⚠️  Sensitive files detected! Review with caution.</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Example Section -->
+    <section id="reports" class="reports">
+        <div class="container">
+            <h2 class="section-title">Sample Report</h2>
+            
+            <div class="report-preview">
+                <div class="code-block large">
+                    <pre><code>======================================================================
+📊 CRAWL REPORT
+======================================================================
+
+🎯 Target: https://example.com
+🕐 Duration: 45.23 seconds
+📊 Requests: 1,245
+📦 Data: 12.4 MB
+❌ Errors: 3
+
+📈 SUMMARY
+----------------------------------------
+Total URLs: 1,042
+Total Directories: 156
+Total Files: 886
+
+📁 FILES BY TYPE
+----------------------------------------
+▸ HTML: 342 files
+▸ JavaScript: 89 files
+▸ CSS: 45 files
+▸ Images: 234 files
+▸ Documents: 12 files
+▸ API Endpoints: 78 files
+▸ Other: 86 files
+
+📂 TOP DIRECTORIES
+----------------------------------------
+  /                         ████████████████░░░░ 342
+  /assets/                  ████████░░░░░░░░░░░░ 156
+  /api/                     ██████░░░░░░░░░░░░░░ 134
+  /images/                  █████░░░░░░░░░░░░░░░ 98
+  /admin/                   ████░░░░░░░░░░░░░░░░ 67
+  /backup/                  ██░░░░░░░░░░░░░░░░░░ 23</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Documentation Section -->
+    <section id="docs" class="api-docs">
+        <div class="container">
+            <h2 class="section-title">API Reference</h2>
+            
+            <div class="api-class">
+                <h3>NetCrawl Class</h3>
+                <div class="code-block">
+                    <pre><code>class NetCrawl:
+    """
+    Main crawler class for website discovery.
+    
+    Args:
+        target_url (str): Website to crawl
+        max_depth (int): Maximum recursion depth (default: 3)
+        max_threads (int): Concurrent threads (default: 10)
+        max_urls (int): URL limit (default: 10000)
+        timeout (int): Request timeout (default: 15)
+        delay (float): Delay between requests (default: 0.5)
+    """</code></pre>
+                </div>
+            </div>
+
+            <div class="methods-grid">
+                <div class="method-card">
+                    <h4><code>start_crawl()</code></h4>
+                    <p>Begins the crawling process. Handles robots.txt, sitemaps, and recursive crawling.</p>
+                </div>
+                <div class="method-card">
+                    <h4><code>generate_report()</code></h4>
+                    <p>Displays final statistics and discovered resources in the console.</p>
+                </div>
+                <div class="method-card">
+                    <h4><code>save_results()</code></h4>
+                    <p>Prompts user for format (TXT/JSON) and exports results to file.</p>
+                </div>
+                <div class="method-card">
+                    <h4><code>_process_url(url, depth)</code></h4>
+                    <p>Internal method that processes individual URLs and extracts links.</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Output Formats</h3>
+            <div class="format-grid">
+                <div class="format-card">
+                    <h4>TXT Format</h4>
+                    <p>Human-readable format with full URL listing and categorization.</p>
+                    <div class="code-block small">
+                        <pre><code>netcrawl_example.com_20240317_143022.txt</code></pre>
+                    </div>
+                </div>
+                <div class="format-card">
+                    <h4>JSON Format</h4>
+                    <p>Machine-parsable format for integration with other tools.</p>
+                    <div class="code-block small">
+                        <pre><code>{
+  "tool": "NetCrawl",
+  "author": "TnYtCoder",
+  "target": "https://example.com",
+  "urls": [...]
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="performance">
+        <div class="container">
+            <h2 class="section-title">Performance Guide</h2>
+            
+            <div class="performance-grid">
+                <div class="perf-card">
+                    <h3>Thread Recommendations</h3>
+                    <table class="perf-table">
+                        <tr>
+                            <th>Threads</th>
+                            <th>Speed</th>
+                            <th>Use Case</th>
+                        </tr>
+                        <tr>
+                            <td>5-10</td>
+                            <td>Conservative</td>
+                            <td>Production sites, rate-limited</td>
+                        </tr>
+                        <tr>
+                            <td>15-25</td>
+                            <td>Aggressive</td>
+                            <td>Testing, development</td>
+                        </tr>
+                        <tr>
+                            <td>30+</td>
+                            <td>Extreme</td>
+                            <td>Local/authorized only</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="perf-card">
+                    <h3>Delay Recommendations</h3>
+                    <table class="perf-table">
+                        <tr>
+                            <th>Delay</th>
+                            <th>Risk Level</th>
+                            <th>Use Case</th>
+                        </tr>
+                        <tr>
+                            <td>0.1s</td>
+                            <td>High</td>
+                            <td>Local testing</td>
+                        </tr>
+                        <tr>
+                            <td>0.3-0.5s</td>
+                            <td>Medium</td>
+                            <td>General crawling</td>
+                        </tr>
+                        <tr>
+                            <td>1.0s+</td>
+                            <td>Low</td>
+                            <td>Stealth mode</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Troubleshooting Section -->
+    <section id="troubleshooting" class="troubleshooting">
+        <div class="container">
+            <h2 class="section-title">Troubleshooting</h2>
+            
+            <div class="troubleshooting-grid">
+                <div class="trouble-card">
+                    <h3>Common Issues</h3>
+                    <dl>
+                        <dt>Module not found</dt>
+                        <dd><code>pip install -r requirements.txt</code></dd>
+                        
+                        <dt>Too slow</dt>
+                        <dd>Increase threads: <code>--threads 20 --delay 0.2</code></dd>
+                        
+                        <dt>Timeouts</dt>
+                        <dd>Increase timeout: <code>--timeout 30</code></dd>
+                        
+                        <dt>Memory high</dt>
+                        <dd>Reduce URL limit: <code>--max-urls 2000</code></dd>
+                        
+                        <dt>No colors</dt>
+                        <dd>Terminal doesn't support ANSI: <code>--no-color</code></dd>
+                    </dl>
+                </div>
+
+                <div class="trouble-card">
+                    <h3>Error Messages</h3>
+                    <dl>
+                        <dt>ConnectionError</dt>
+                        <dd>Network issue - check internet, increase timeout</dd>
+                        
+                        <dt>SSLError</dt>
+                        <dd>Certificate issue - update certifi or ignore (not recommended)</dd>
+                        
+                        <dt>TooManyRedirects</dt>
+                        <dd>Redirect loop - reduce depth, check target</dd>
+                        
+                        <dt>MemoryError</dt>
+                        <dd>Too many URLs - use <code>--max-urls</code></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimer Section -->
+    <section id="disclaimer" class="disclaimer">
+        <div class="container">
+            <h2 class="section-title">Legal Disclaimer</h2>
+            <div class="warning-box">
+                <div class="warning-icon">⚠️</div>
+                <div class="warning-content">
+                    <h3>IMPORTANT: Read Before Using</h3>
+                    <p>This tool performs ACTIVE crawling on target websites. Usage is permitted ONLY on:</p>
+                    <ul>
+                        <li>Websites you own</li>
+                        <li>Websites with explicit written permission</li>
+                        <li>Local development environments</li>
+                    </ul>
+                    <p><strong>Unauthorized crawling may violate:</strong></p>
+                    <ul>
+                        <li>Computer Fraud and Abuse Act (CFAA) - United States</li>
+                        <li>Computer Misuse Act 1990 - United Kingdom</li>
+                        <li>Similar cybercrime laws worldwide</li>
+                    </ul>
+                    <p class="liability">By using this software, you assume all liability for your actions. The author accepts no responsibility for misuse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>NetCrawl</h4>
+                    <p>Professional website crawler and directory discovery tool.</p>
+                    <p class="copyright">© 2024 TnYtCoder</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#usage">Usage</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/TnYtCoder/NetCrawl">GitHub</a></li>
+                        <li><a href="https://github.com/TnYtCoder/NetCrawl/issues">Issues</a></li>
+                        <li><a href="https://github.com/TnYtCoder/NetCrawl/blob/main/LICENSE">License</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Author</h4>
+                    <p>TnYtCoder</p>
+                    <p class="badge">
+                        <a href="https://github.com/TnYtCoder">
+                            <img src="https://img.shields.io/github/followers/TnYtCoder?style=social" alt="GitHub">
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>⭐ Star on GitHub if you find this useful!</p>
+                <p>Documentation v2.0 | Last updated: March 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copy Button Script -->
+    <script>
+        function copyCode(btn) {
+            const codeBlock = btn.closest('.code-block');
+            const code = codeBlock.querySelector('code').innerText;
+            navigator.clipboard.writeText(code);
+            
+            btn.textContent = 'Copied!';
+            setTimeout(() => {
+                btn.textContent = 'Copy';
+            }, 2000);
+        }
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
